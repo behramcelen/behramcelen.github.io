@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Behram ÇELEN">
+    <title>Neden Symfony? - Behram ÇELEN</title>
+    <meta name="author" content="Behram ÇELEN">
+    
+        <meta name="keywords" content="Behram,ÇELEN,">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"},"articleBody":"Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir kitle. Bunu sağlayan büyük oranda profesyonel bir şirket olan  SensioLabsın projenin takibini yürütmesi, özellikle  Fabien Potencier  gibi bir core developer ının olması. Fabien Potencier ı araştıranlar anlayacaktır neden bu kadar övdüğümü şuan PHP üzerine yapılan bir çok projenin, framework ün kullandığı compenent ler teknolojiler @fabpot un elinden çıkmadır. Aynı zamanda proje yönetimi konusundada oldukça efsanedir. Örnek projeleri;\n\nSymfony Compenents\nTwig Templating\nSilex\nSwift Mailer\nPimple\nDoctrine\nBlackfile\n.. ve daha neler neler\n\nAmaçSensioLabs ‘ın genel düşüncesi reusable components yazmaktır , ki bir component farklı projelerde rahatlıkla kullanılabilsin. Misal şuan Drupal, phpBB, Joomla! ve en çok Symfony alternatif olarak gösterilen Laravel birçok Symfony Components i kullanmaktadır, alakalı  link -&gt;. Yani şuana kadar aslında Symfony Components kullanmış olmanız muhtemel.\nCore Developer TeamEkibin büyük kısmı web development konusunda fazlaca tecrübeli ve birçoğu PHP nin önde gelen isimlerinden. Misal kesinlikle lame coders değiller, proje yönetimi nasıl olmalı, problem çözümü nasıl olmalı semver nasıl kullanılmalı vs. birçok konuda bilgi sahibiler. Birde Symfony Core Developer olmak gerçekten çok zor, alakalı  link  .Sırf bu sayfadaki rollerin, kimin ne yapabileceğinin düzenliliğinden dahi mükemmelliyetçiliği anlamak mümkün.\nContributingSymfony ye contribute etmek çetrefilli bir iş gerçekten. Herşeyin bir standardı bir prosodürü var neredeyse.  Buradan  anlaşılacağı üzere development da katı kurallara sahiptir. Yani az biraz coding bilen kişi pr göndereyim benim de katkım olsun diyebileceği bir proje değil kesinlikle. Ben projenin kalitesini bu katı kurallarına bağlayanlarındanım. Fakat yanlış anlaşılmasın symfony nin  ~1400  contributer ı var yani aslında biz developer ların elinden çıkma Open Source bir proje.\nRoadmap (link)Semver  denince benim aklıma direk Symfony projesi gelir. Sebebi ise mükemmel bir release roadmap i olması. Düşün ki şimdiden 2024 e kadar ki çıkacak releases  planı  hazır. Bu düzenlilik ne sağlıyor derseniz, birgün sabah kalktığınızda Symfony cahili olarak uyanmıyorsunuz. Misal Symfony3 release de silinecek code uses varsa bunu 2.7 gibi @deprecated işaretlemesini yaparlar ki sen yavaştan code revise ını yap Symfony3 e rahatlıkla geçebilesin. Özellikle büyük projeler için kararlı ve doğru semver kullanımı hayati öneme sahip. Symfony ile birgün  composer update  yaptığınızda patlama ihtimaliniz çok düşük. Aynı konunun  Pythonve  Angular.jsörneklerini araştırabilirsiniz.\nDocumantationO kadar çok dilin framework ün doc. unu okumuşumdur kesinlikle Symfony bu konuda bir dünya markası. Eğer ki bir contributing yapılıyorsa kesinlikle onun doc. uda ekleniyor.  Buradan  browse edileceği üzere gayet anlaşılır şekilde rich content ile anlatımlı documentation bulunabilir. Ayrıca örnek kodlar, coding standards ve blog yazıları gibi bir çok içerik mevcut. Özellikle  Best Practices  adlı bir bölümü tadından yenmez :) Pdf leri indirerek yolda vs. okuyabilirsiniz. Bana bunlar yetmedi daha görsel birşeyler arıyorum dersen de  KnpUniversity  var. Birde verdiğim linklerdeki tüm content İngilizce, “Ama benim ingilizcem yok” a cevabım net “derhal terket burayı, ingilizce öğrenene kadarda gelme” :) şaka bir yana ama gerçekten ingilizce olmadan Symfony öğrenmek biryana kaliteli bir  developer  olmanız imkansız.\nCommunitySymfony community si fazlasıyla etkin, sorunlarınıza irc kanalından, mail gruplarına, slack grubundan, stackoverflow dan veya direk Github project issues kısmından bildirebilirsiniz, ama öncelikle bir google araması yapmayı unutmayın :). Çok zorda kalırsan da  banagönderebilirsin (ama böyle çok aradın bulamadın :)Alakalı Linkler;\n\nhttps://symfony.com/support\nhttp://stackoverflow.com/questions/tagged/symfony2\nhttps://symfony.com/irc\nhttps://symfony2slack.herokuapp.com/\nhttp://symfony.com/mailing-listsMuhtemelen ilk google aramanda bulursun çözümünü. Senden önce birisi kesinlikle karşılaşmış oluyor zaten.\n\nMimari BakışSymfony Framework aslında sadece Symfony Components i birleştiren bir glue den ibarettir (bkn: SymfonyFrameworkBundle). Directory yapısına bakarsanız zaten vendor u çıkardıktan sonra geriye sadece app ın ve web in altında birkaç dosyadan ibaret olduğunu göreceksiniz. Benim gözümde Symfony ‘yi mükemmel kılanda bu modüler bakış açısı. Bu neyi sağlıyor, misal developer arkadaşım ben reusable XBundle yazacağım dediğin zaman bunu fazlasıyla destekliyor. Bu mantıkla Symfony için yapılmış binlerce 3. party bundle mevcut. Misal  FosUserBundle,  AsseticBundle  vs. vs.Modüler yapı ile neredeyse her noktada process e müdahil olabiliyorsun. Bunu nasıl yapıyor derseniz Event Dispatch mantığı (Farklı bir yazı ile bu konuyu da anlatmaya çalışacağım). Gerek naming gerek directory mapping açısından da kaliteli bir iş.\nŞimdilik bu kadar fırsat buldukça bu yazının devamını getirmeye çalışacağım.\n\n“ Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and a Community — all working together in harmony.”\nMutlu Günler :)\n","dateCreated":"2016-11-14T04:40:12+01:00","dateModified":"2019-04-04T06:48:03+02:00","datePublished":"2016-11-14T04:40:12+01:00","description":"","headline":"Neden Symfony?","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://behram.org/2016/11/14/symfony-yi-anlamak/"},"publisher":{"@type":"Organization","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif","logo":{"@type":"ImageObject","url":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"}},"url":"https://behram.org/2016/11/14/symfony-yi-anlamak/"}</script>
+    <meta name="description" content="Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir">
+<meta name="keywords" content="Behram,ÇELEN">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Neden Symfony?">
+<meta property="og:url" content="https://behram.org/2016/11/14/symfony-yi-anlamak/index.html">
+<meta property="og:site_name" content="Behram ÇELEN">
+<meta property="og:description" content="Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-04-04T04:48:03.492Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Neden Symfony?">
+<meta name="twitter:description" content="Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir">
+<meta name="twitter:creator" content="@behramcelen">
+    
+    
+        
+            <meta property="fb:admins" content="1444886209" />
+        
+    
+    
+        <meta property="og:image" content="https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-c4ozcsklz4kht2pebhp44xorvyverh23toayhn7i6ubrpyedak24hv1v0hyd.min.css">
+    <!--STYLES END-->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81206646-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-81206646-1');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">Behram ÇELEN</a>
+    </div>
+    
+        
+            <a class="header-right-picture " href="#about">
+        
+        
+            <img class="header-picture" src="https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif" alt="Author&#39;s picture">
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif" alt="Author&#39;s picture">
+                </a>
+                <h4 class="sidebar-profile-name">Behram ÇELEN</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>PHP/Symfony Expert</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/ " title="Home">
+                    
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives" title="Archives">
+                    
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="#about" title="About">
+                    
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.linkedin.com/in/behramcelen" target="_blank" rel="noopener" title="LinkedIn">
+                    
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://facebook.com/behramcelen" target="_blank" rel="noopener" title="Facebook">
+                    
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.instagram.com/behramcelen/" target="_blank" rel="noopener" title="Instagram">
+                    
+                        <i class="sidebar-button-icon fab fa-instagram" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Instagram</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.messenger.com/t/behramcelen" target="_blank" rel="noopener" title="Messenger">
+                    
+                        <i class="sidebar-button-icon fab fa-facebook-messenger" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Messenger</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml" title="RSS">
+                    
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/behram" target="_blank" rel="noopener" title="GitHub">
+                    
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.udemy.com/user/behramcelen/" target="_blank" rel="noopener" title="Udemy">
+                    
+                        <i class="sidebar-button-icon fa fa-underline" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Udemy</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://twitter.com/behramcelen" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://medium.com/@behram" target="_blank" rel="noopener" title="Medium">
+                    
+                        <i class="sidebar-button-icon fab fa-medium" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Medium</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="http://stackoverflow.com/users/2438520/behramcelen" target="_blank" rel="noopener" title="Stack Overflow">
+                    
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.youtube.com/user/behramcelen" target="_blank" rel="noopener" title="YouTube">
+                    
+                        <i class="sidebar-button-icon fab fa-youtube" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">YouTube</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="mailto:behramcelen@gmail.com" target="_blank" rel="noopener" title="Mail">
+                    
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.slideshare.net/behramcelen" target="_blank" rel="noopener" title="SlideShare">
+                    
+                        <i class="sidebar-button-icon fab fa-slideshare" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">SlideShare</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Neden Symfony?
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2016-11-14T04:40:12+01:00">
+	
+		    Nov 14, 2016
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir kitle. Bunu sağlayan büyük oranda profesyonel bir şirket olan  <a href="https://sensiolabs.com/" target="_blank" rel="noopener">SensioLabs</a>ın projenin takibini yürütmesi, özellikle  <a href="https://github.com/fabpot" target="_blank" rel="noopener">Fabien Potencier</a>  gibi bir core developer ının olması. Fabien Potencier ı araştıranlar anlayacaktır neden bu kadar övdüğümü şuan PHP üzerine yapılan bir çok projenin, framework ün kullandığı compenent ler teknolojiler @fabpot un elinden çıkmadır. Aynı zamanda proje yönetimi konusundada oldukça efsanedir. Örnek projeleri;</p>
+<ul>
+<li><a href="http://symfony.com/components" target="_blank" rel="noopener">Symfony Compenents</a></li>
+<li><a href="http://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig Templating</a></li>
+<li><a href="http://silex.sensiolabs.org/" target="_blank" rel="noopener">Silex</a></li>
+<li><a href="http://swiftmailer.org/" target="_blank" rel="noopener">Swift Mailer</a></li>
+<li><a href="http://pimple.sensiolabs.org/" target="_blank" rel="noopener">Pimple</a></li>
+<li><a href="https://github.com/doctrine" target="_blank" rel="noopener">Doctrine</a></li>
+<li><a href="https://blackfire.io/" target="_blank" rel="noopener">Blackfile</a></li>
+<li>.. ve daha neler neler</li>
+</ul>
+<h3 id="Amac"><a href="#Amac" class="headerlink" title="Amaç"></a><a href="http://behram.org/2016/11/14/symfony-yi-anlamak/#Amac" title="Amaç"></a>Amaç</h3><p>SensioLabs ‘ın genel düşüncesi reusable components yazmaktır , ki bir component farklı projelerde rahatlıkla kullanılabilsin. Misal şuan Drupal, phpBB, Joomla! ve en çok Symfony alternatif olarak gösterilen Laravel birçok Symfony Components i kullanmaktadır, alakalı  <a href="http://symfony.com/projects" target="_blank" rel="noopener">link -&gt;</a>. Yani şuana kadar aslında Symfony Components kullanmış olmanız muhtemel.</p>
+<h2 id="Core-Developer-Team"><a href="#Core-Developer-Team" class="headerlink" title="Core Developer Team"></a>Core Developer Team</h2><p>Ekibin büyük kısmı web development konusunda fazlaca tecrübeli ve birçoğu PHP nin önde gelen isimlerinden. Misal kesinlikle lame coders değiller, proje yönetimi nasıl olmalı, problem çözümü nasıl olmalı semver nasıl kullanılmalı vs. birçok konuda bilgi sahibiler. Birde Symfony Core Developer olmak gerçekten çok zor, alakalı  <a href="http://symfony.com/doc/current/contributing/code/core_team.html" target="_blank" rel="noopener">link</a>  .Sırf bu sayfadaki rollerin, kimin ne yapabileceğinin düzenliliğinden dahi mükemmelliyetçiliği anlamak mümkün.</p>
+<h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>Symfony ye contribute etmek çetrefilli bir iş gerçekten. Herşeyin bir standardı bir prosodürü var neredeyse.  <a href="http://symfony.com/doc/current/contributing/code/index.html" target="_blank" rel="noopener">Buradan</a>  anlaşılacağı üzere development da katı kurallara sahiptir. Yani az biraz coding bilen kişi pr göndereyim benim de katkım olsun diyebileceği bir proje değil kesinlikle. Ben projenin kalitesini bu katı kurallarına bağlayanlarındanım. Fakat yanlış anlaşılmasın symfony nin  <a href="https://github.com/symfony/symfony/graphs/contributors" target="_blank" rel="noopener">~1400</a>  contributer ı var yani aslında biz developer ların elinden çıkma Open Source bir proje.</p>
+<h2 id="Roadmap-link"><a href="#Roadmap-link" class="headerlink" title="Roadmap (link)"></a>Roadmap (<a href="https://symfony.com/doc/current/contributing/community/releases.html" target="_blank" rel="noopener">link</a>)</h2><p><a href="http://semver.org/" target="_blank" rel="noopener">Semver</a>  denince benim aklıma direk Symfony projesi gelir. Sebebi ise mükemmel bir release roadmap i olması. Düşün ki şimdiden 2024 e kadar ki çıkacak releases  <a href="https://symfony.com/doc/current/contributing/community/releases.html" target="_blank" rel="noopener">planı</a>  hazır. Bu düzenlilik ne sağlıyor derseniz, birgün sabah kalktığınızda Symfony cahili olarak uyanmıyorsunuz. Misal Symfony3 release de silinecek code uses varsa bunu 2.7 gibi @deprecated işaretlemesini yaparlar ki sen yavaştan code revise ını yap Symfony3 e rahatlıkla geçebilesin. Özellikle büyük projeler için kararlı ve doğru semver kullanımı hayati öneme sahip. Symfony ile birgün  <code>composer update</code>  yaptığınızda patlama ihtimaliniz çok düşük. Aynı konunun  <code>Python</code>ve  <code>Angular.js</code>örneklerini araştırabilirsiniz.</p>
+<h2 id="Documantation"><a href="#Documantation" class="headerlink" title="Documantation"></a>Documantation</h2><p>O kadar çok dilin framework ün doc. unu okumuşumdur kesinlikle Symfony bu konuda bir dünya markası. Eğer ki bir contributing yapılıyorsa kesinlikle onun doc. uda ekleniyor.  <a href="https://symfony.com/doc/current/index.html" target="_blank" rel="noopener">Buradan</a>  browse edileceği üzere gayet anlaşılır şekilde rich content ile anlatımlı documentation bulunabilir. Ayrıca örnek kodlar, coding standards ve blog yazıları gibi bir çok içerik mevcut. Özellikle  <a href="https://symfony.com/doc/current/best_practices/index.html" target="_blank" rel="noopener">Best Practices</a>  adlı bir bölümü tadından yenmez :) Pdf leri indirerek yolda vs. okuyabilirsiniz. Bana bunlar yetmedi daha görsel birşeyler arıyorum dersen de  <a href="https://knpuniversity.com/" target="_blank" rel="noopener">KnpUniversity</a>  var. Birde verdiğim linklerdeki tüm content İngilizce, “Ama benim ingilizcem yok” a cevabım net “derhal terket burayı, ingilizce öğrenene kadarda gelme” :) şaka bir yana ama gerçekten ingilizce olmadan Symfony öğrenmek biryana kaliteli bir  <code>developer</code>  olmanız imkansız.</p>
+<h2 id="Community"><a href="#Community" class="headerlink" title="Community"></a>Community</h2><p>Symfony community si fazlasıyla etkin, sorunlarınıza irc kanalından, mail gruplarına, slack grubundan, stackoverflow dan veya direk Github project issues kısmından bildirebilirsiniz, ama öncelikle bir google araması yapmayı unutmayın :). Çok zorda kalırsan da  <a href="http://github.com/behram" target="_blank" rel="noopener">bana</a>gönderebilirsin (ama böyle çok aradın bulamadın :)<br>Alakalı Linkler;</p>
+<ul>
+<li><a href="https://symfony.com/support" target="_blank" rel="noopener">https://symfony.com/support</a></li>
+<li><a href="http://stackoverflow.com/questions/tagged/symfony2" target="_blank" rel="noopener">http://stackoverflow.com/questions/tagged/symfony2</a></li>
+<li><a href="https://symfony.com/irc" target="_blank" rel="noopener">https://symfony.com/irc</a></li>
+<li><a href="https://symfony2slack.herokuapp.com/" target="_blank" rel="noopener">https://symfony2slack.herokuapp.com/</a></li>
+<li><a href="http://symfony.com/mailing-lists" target="_blank" rel="noopener">http://symfony.com/mailing-lists</a><br>Muhtemelen ilk google aramanda bulursun çözümünü. Senden önce birisi kesinlikle karşılaşmış oluyor zaten.</li>
+</ul>
+<h2 id="Mimari-Bakis"><a href="#Mimari-Bakis" class="headerlink" title="Mimari Bakış"></a>Mimari Bakış</h2><p>Symfony Framework aslında sadece Symfony Components i birleştiren bir glue den ibarettir (bkn: SymfonyFrameworkBundle). Directory yapısına bakarsanız zaten vendor u çıkardıktan sonra geriye sadece app ın ve web in altında birkaç dosyadan ibaret olduğunu göreceksiniz. Benim gözümde Symfony ‘yi mükemmel kılanda bu modüler bakış açısı. Bu neyi sağlıyor, misal developer arkadaşım ben reusable XBundle yazacağım dediğin zaman bunu fazlasıyla destekliyor. Bu mantıkla Symfony için yapılmış binlerce 3. party bundle mevcut. Misal  <code>FosUserBundle</code>,  <code>AsseticBundle</code>  vs. vs.<br>Modüler yapı ile neredeyse her noktada process e müdahil olabiliyorsun. Bunu nasıl yapıyor derseniz Event Dispatch mantığı (Farklı bir yazı ile bu konuyu da anlatmaya çalışacağım). Gerek naming gerek directory mapping açısından da kaliteli bir iş.</p>
+<p>Şimdilik bu kadar fırsat buldukça bu yazının devamını getirmeye çalışacağım.</p>
+<hr>
+<h3 id="“-Symfony-is-a-set-of-PHP-Components-a-Web-Application-framework-a-Philosophy-and-a-Community-—-all-working-together-in-harmony-”"><a href="#“-Symfony-is-a-set-of-PHP-Components-a-Web-Application-framework-a-Philosophy-and-a-Community-—-all-working-together-in-harmony-”" class="headerlink" title="“ Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and a Community — all working together in harmony.”"></a>“ Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and a Community — all working together in harmony.”</h3><hr>
+<p>Mutlu Günler :)</p>
+
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/php-ve-elasticsearch-ile-gelismis-arama-mimarisi/" data-tooltip="PHP ile Gelişmiş Arama Mimarisi" aria-label="PREVIOUS: PHP ile Gelişmiş Arama Mimarisi">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/13/symfony-de-yaml-mi-annotation-mi/" data-tooltip="Symfony de Yaml mı Annotation mı?" aria-label="NEXT: Symfony de Yaml mı Annotation mı?">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2019 Behram ÇELEN. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/php-ve-elasticsearch-ile-gelismis-arama-mimarisi/" data-tooltip="PHP ile Gelişmiş Arama Mimarisi" aria-label="PREVIOUS: PHP ile Gelişmiş Arama Mimarisi">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/13/symfony-de-yaml-mi-annotation-mi/" data-tooltip="Symfony de Yaml mı Annotation mı?" aria-label="NEXT: Symfony de Yaml mı Annotation mı?">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/14/symfony-yi-anlamak/">
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/14/symfony-yi-anlamak/">
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/14/symfony-yi-anlamak/">
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif" alt="Author&#39;s picture">
+        
+            <h4 id="about-card-name">Behram ÇELEN</h4>
+        
+            <div id="about-card-bio"><p>PHP/Symfony Expert</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Software Developer</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br>
+                Wroclaw/Poland
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover-behram.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-dbd16rvloemmuxdzniplmnxxvwoz24eya9wol0b7vvmlokgqsjivmb8dnscy.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://behram.org/2016/11/14/symfony-yi-anlamak/';
+                 
+                    this.page.identifier = '2016/11/14/symfony-yi-anlamak/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'behramcelen';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>
