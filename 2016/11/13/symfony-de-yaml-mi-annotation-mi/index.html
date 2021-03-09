@@ -15,16 +15,16 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"},"articleBody":"Symfony camiasının genel tartışması annotation mı yoksa yaml configuration daha kullanışlıdır. Tüm açılardan bakarak karşılaştırmaya çalışacağım. Aynı zamanda XML de bu karşılaştırmaya katılabilir fakat birçok bundle XML configution desteklemediği için şimdilik ayrı tutuyorum.\nSpeed (Hız)\nHerkezin ilk düşüncesi muhtemelen hız farkı olur mudur? Baştan söyleyeyim ikisi arasında eğer ki bir Symfony projesinden bahsediyorsak hiçbir hız farkı olmayacaktır (Symfony Core Configuration için bahsediyorum). Sebebi şu ki Symfony yi az biraz bilenler bilir bu mantık Doctrine dede aynı şekilde ilk request veya cache:warmup işleminde annotation, yaml veya xml farketmeksizin php ye convert edilir. Sonraki request ler için direk pure php den okunur bu yüzden Doctrine veya Symfony configuration farketmeksizin hız bakımından bir karşılaştırma yapılamaz.\nReadability (Okunabilirlik)\nBu maddede bence yaml çok daha readability si yüksek çünkü gereksiz hiçbir karakter içermeden minor indentations ile hızlıca configuration yapabiliyorsunuz. Ayrıca Yaml ı birçok IDE fazlasıyla destekliyor auto indentation yapabiliyorsunuz ve bir standart a bağlı. Annotation da maalesef belirli bir standart olmadığı için okunabilirlik yerlerde, birçok IDE extra plugins ile destekliyor fakat stabil çalışan yok denebilir. Annotation için auto indentation yapan bir plugin yok bildiğim kadarı ile. Eğer ki bir de Doctrine conf. u Annotation ile yapayım derseniz readability ölü diyebiliriz. Bunu verdiğim  linkten rahatlıkla anlayabilirsiniz.\nEğer ki birde büyük bir projeden bahsediyorsak muhtelemen onlarca extra bundle kullanılacaktır. Bunun sonucu olarak entitylerde 30 line lara kadar propery annotation görmeniz muhtemel hale geliyor.\nİçerikten anlaşılacağı üzere bu maddede ben kesinlikle Yaml destekçisiyim.\nYazım kolaylığı\nEğer ki küçük bir projede çalışıyorsanız misal 2 kişinin çalıştığı max. 20 action olan bir minor bir sistem ise Annotation size fazlası ile hız kazandıracaktır extra dosya create etmeden misal routing için direk action larda annotation kullanarak rahat ve hızlı şekilde yazabilirsin. Aynı şekilde max. 3 entity ile işim var ve çok karmaşık relationsum yok dersen aynı şekilde annotation kullanabilirsin. Ama dersen ki projede 5&gt; kişi var, aktif development süreci var, 300&gt; action ımız 50&gt; entity ve relations çorba dersen kesinlikle Yaml derim, eğer annotation kullanıp gününü conflict resolve ile harcamak istemiyorsan.\nBüyük projelerde annotation kullanımında bir süre sonra özellikle entity lerde her bundle için bir conf. ekleyerek 50 line lık bir entity olacaktır 1000 line sonrasında bug çıktığında hangi line da problem var çözmesi zaman alacaktır.\nSonuç olarak bu maddede büyük proje ise kesinlikle Yaml, küçük projeler için Annotation kullanılabilir diyorum.\nGrup Çalışması\nSymfony nin en aşık olduğum felsefesi directory yapısının mükemmel şekilde dizayn edilmiş olmasıdır. Aynı zamanda naming konusunda gerçekten çok titiz olmaları. Aynı mantıkta bir projede directory yapısını ne kadar düzenli tutarsanız, development ında o derece düzenli ve mantıklı ilerlemesi muhtemel. Bunu fazlasıyla tecrübe etmiş birisi olarak, büyük projelerde proje directory root u ne kadar dağınık(tek merkezde toplanmamış) tutulursa development kolaylığı da o derece kolaylaşıyor.\nBahsettiğim dağınık yapı Yaml ile sağlanabilir. Misal doctrine configuration bir directory de, routing bir directory, validation bir directory, services bir directory de vb. birçok örnek verilebilir. Annotation için düşünürsek entity içerisinde doctrine, validation, bundle configuration da olsun bu da olsun derseniz bu daha merkeziyetçi bir yaklaşım oluyor.\nDağınık yapının ilk yararı git conflict resolve sürenizi minimize eder :). Bir projede 5&gt; kişi çalışıyorsa birisi routing üzerinde çalışırken bir diğeri controllers üzerinde çalışabilir. Aynı şekilde birisi entity lerde düzenleme yaparken diğeri aynı entity nin validation kısmına bakabilir.\nDağınık yapıda file history den fazlasıyla bilgi alınabilir. Benim fazlasıyla kullandığım bir tool dur github da olan aynı zamanda commandline dada bakabileceğiniz, bir dosyanın change history si. Eğer ki misal validation ile ilgili bir history ye bakmak istiyorsunuz Yaml da sadece related entity nin validation dosyasının history sine bakarak çok daha sağlam bilgi edinebilirken. Annotation da related entity nin git history sine bakacaksınız alakasız birçok commit i incelemeniz muhtemel.\nGit için benim genel felsefem herzaman için minor parçalar halinde çok commit atmaktır. Sebebi farklı birisi yaptığın işlere baktığında hangi commit ile ne amaçladın en ince detayına kadar anlayabilsin. Bu felsefeyi en iyi destekleyen yapı tabikide dağınık directory yapısı, Yaml configuration.\nBu maddedede benim düşüncem eğer ki 5&gt; kişilik bir proje ekibi varsa Yaml zorunluluk.\n\nSon cümlem: “Sağlam bir projem var diyorsan Yaml, diğer türlü Annotation”\n\nİyi Günler.\n","dateCreated":"2016-11-13T04:40:12+01:00","dateModified":"2019-04-04T06:47:34+02:00","datePublished":"2016-11-13T04:40:12+01:00","description":"","headline":"Symfony de Yaml mı Annotation mı?","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/"},"publisher":{"@type":"Organization","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif","logo":{"@type":"ImageObject","url":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"}},"url":"https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"},"articleBody":"Symfony camiasının genel tartışması annotation mı yoksa yaml configuration daha kullanışlıdır. Tüm açılardan bakarak karşılaştırmaya çalışacağım. Aynı zamanda XML de bu karşılaştırmaya katılabilir fakat birçok bundle XML configution desteklemediği için şimdilik ayrı tutuyorum.\nSpeed (Hız)\nHerkezin ilk düşüncesi muhtemelen hız farkı olur mudur? Baştan söyleyeyim ikisi arasında eğer ki bir Symfony projesinden bahsediyorsak hiçbir hız farkı olmayacaktır (Symfony Core Configuration için bahsediyorum). Sebebi şu ki Symfony yi az biraz bilenler bilir bu mantık Doctrine dede aynı şekilde ilk request veya cache:warmup işleminde annotation, yaml veya xml farketmeksizin php ye convert edilir. Sonraki request ler için direk pure php den okunur bu yüzden Doctrine veya Symfony configuration farketmeksizin hız bakımından bir karşılaştırma yapılamaz.\nReadability (Okunabilirlik)\nBu maddede bence yaml çok daha readability si yüksek çünkü gereksiz hiçbir karakter içermeden minor indentations ile hızlıca configuration yapabiliyorsunuz. Ayrıca Yaml ı birçok IDE fazlasıyla destekliyor auto indentation yapabiliyorsunuz ve bir standart a bağlı. Annotation da maalesef belirli bir standart olmadığı için okunabilirlik yerlerde, birçok IDE extra plugins ile destekliyor fakat stabil çalışan yok denebilir. Annotation için auto indentation yapan bir plugin yok bildiğim kadarı ile. Eğer ki bir de Doctrine conf. u Annotation ile yapayım derseniz readability ölü diyebiliriz. Bunu verdiğim  linkten rahatlıkla anlayabilirsiniz.\nEğer ki birde büyük bir projeden bahsediyorsak muhtelemen onlarca extra bundle kullanılacaktır. Bunun sonucu olarak entitylerde 30 line lara kadar propery annotation görmeniz muhtemel hale geliyor.\nİçerikten anlaşılacağı üzere bu maddede ben kesinlikle Yaml destekçisiyim.\nYazım kolaylığı\nEğer ki küçük bir projede çalışıyorsanız misal 2 kişinin çalıştığı max. 20 action olan bir minor bir sistem ise Annotation size fazlası ile hız kazandıracaktır extra dosya create etmeden misal routing için direk action larda annotation kullanarak rahat ve hızlı şekilde yazabilirsin. Aynı şekilde max. 3 entity ile işim var ve çok karmaşık relationsum yok dersen aynı şekilde annotation kullanabilirsin. Ama dersen ki projede 5&gt; kişi var, aktif development süreci var, 300&gt; action ımız 50&gt; entity ve relations çorba dersen kesinlikle Yaml derim, eğer annotation kullanıp gününü conflict resolve ile harcamak istemiyorsan.\nBüyük projelerde annotation kullanımında bir süre sonra özellikle entity lerde her bundle için bir conf. ekleyerek 50 line lık bir entity olacaktır 1000 line sonrasında bug çıktığında hangi line da problem var çözmesi zaman alacaktır.\nSonuç olarak bu maddede büyük proje ise kesinlikle Yaml, küçük projeler için Annotation kullanılabilir diyorum.\nGrup Çalışması\nSymfony nin en aşık olduğum felsefesi directory yapısının mükemmel şekilde dizayn edilmiş olmasıdır. Aynı zamanda naming konusunda gerçekten çok titiz olmaları. Aynı mantıkta bir projede directory yapısını ne kadar düzenli tutarsanız, development ında o derece düzenli ve mantıklı ilerlemesi muhtemel. Bunu fazlasıyla tecrübe etmiş birisi olarak, büyük projelerde proje directory root u ne kadar dağınık(tek merkezde toplanmamış) tutulursa development kolaylığı da o derece kolaylaşıyor.\nBahsettiğim dağınık yapı Yaml ile sağlanabilir. Misal doctrine configuration bir directory de, routing bir directory, validation bir directory, services bir directory de vb. birçok örnek verilebilir. Annotation için düşünürsek entity içerisinde doctrine, validation, bundle configuration da olsun bu da olsun derseniz bu daha merkeziyetçi bir yaklaşım oluyor.\nDağınık yapının ilk yararı git conflict resolve sürenizi minimize eder :). Bir projede 5&gt; kişi çalışıyorsa birisi routing üzerinde çalışırken bir diğeri controllers üzerinde çalışabilir. Aynı şekilde birisi entity lerde düzenleme yaparken diğeri aynı entity nin validation kısmına bakabilir.\nDağınık yapıda file history den fazlasıyla bilgi alınabilir. Benim fazlasıyla kullandığım bir tool dur github da olan aynı zamanda commandline dada bakabileceğiniz, bir dosyanın change history si. Eğer ki misal validation ile ilgili bir history ye bakmak istiyorsunuz Yaml da sadece related entity nin validation dosyasının history sine bakarak çok daha sağlam bilgi edinebilirken. Annotation da related entity nin git history sine bakacaksınız alakasız birçok commit i incelemeniz muhtemel.\nGit için benim genel felsefem herzaman için minor parçalar halinde çok commit atmaktır. Sebebi farklı birisi yaptığın işlere baktığında hangi commit ile ne amaçladın en ince detayına kadar anlayabilsin. Bu felsefeyi en iyi destekleyen yapı tabikide dağınık directory yapısı, Yaml configuration.\nBu maddedede benim düşüncem eğer ki 5&gt; kişilik bir proje ekibi varsa Yaml zorunluluk.\n\nSon cümlem: “Sağlam bir projem var diyorsan Yaml, diğer türlü Annotation”\n\nİyi Günler.\n","dateCreated":"2016-11-13T04:40:12+01:00","dateModified":"2019-04-04T06:47:34+02:00","datePublished":"2016-11-13T04:40:12+01:00","description":"","headline":"Symfony de Yaml mı Annotation mı?","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/"},"publisher":{"@type":"Organization","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif","logo":{"@type":"ImageObject","url":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"}},"url":"https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/"}</script>
     <meta name="description" content="Symfony camiasının genel tartışması annotation mı yoksa yaml configuration daha kullanışlıdır. Tüm açılardan bakarak karşılaştırmaya çalışacağım. Aynı zamanda XML de bu karşılaştırmaya katılabilir fak">
 <meta name="keywords" content="Behram,ÇELEN">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Symfony de Yaml mı Annotation mı?">
-<meta property="og:url" content="https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/index.html">
+<meta property="og:url" content="https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/index.html">
 <meta property="og:site_name" content="Behram ÇELEN">
 <meta property="og:description" content="Symfony camiasının genel tartışması annotation mı yoksa yaml configuration daha kullanışlıdır. Tüm açılardan bakarak karşılaştırmaya çalışacağım. Aynı zamanda XML de bu karşılaştırmaya katılabilir fak">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-04T04:47:34.356Z">
+<meta property="og:updated_time" content="2019-04-04T04:47:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Symfony de Yaml mı Annotation mı?">
 <meta name="twitter:description" content="Symfony camiasının genel tartışması annotation mı yoksa yaml configuration daha kullanışlıdır. Tüm açılardan bakarak karşılaştırmaya çalışacağım. Aynı zamanda XML de bu karşılaştırmaya katılabilir fak">
@@ -356,7 +356,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -364,7 +364,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -372,7 +372,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -412,7 +412,7 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2019 Behram ÇELEN. All Rights Reserved.
+        Copyrights &copy; 2021 Behram ÇELEN. All Rights Reserved.
     </span>
 </footer>
 
@@ -452,7 +452,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -460,7 +460,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -468,7 +468,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -502,7 +502,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/">
                         <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
                     </a>
                 </li>
@@ -510,7 +510,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/">
                         <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
                     </a>
                 </li>
@@ -518,7 +518,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/">
                         <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
                     </a>
                 </li>
@@ -577,7 +577,7 @@
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'https://behram.org/2016/11/13/symfony-de-yaml-mi-annotation-mi/';
+                 this.page.url = 'https://behram.dev/2016/11/13/symfony-de-yaml-mi-annotation-mi/';
                  
                     this.page.identifier = '2016/11/13/symfony-de-yaml-mi-annotation-mi/';
                  

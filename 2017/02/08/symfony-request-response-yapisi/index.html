@@ -15,17 +15,17 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"},"articleBody":"Symfony ‘de bundles, modules, compenents, configurations vs. duyunca çok karışık framework havası var ancak işin aslı Symfony Framework sadece Request objesini alıp Response objesine dönüştürmesi. Symfony nin ana mantığının anlaşılması için Request/Response yapısı anlaşılması zorunlu sayılabilir.\nDönüştürme olayı  buradaki  iki satırdan anlaşılabilir. Gelen Request params ile bir Request objesi oluşturuluyor. Sonrasında application kernel request i handle ettikten sonra bir Response objesi return ediyor ve client a response gönderiliyor. Bu şekilde tek cümlede anlatınca application kernel in yaptığı basit bir olay gibi duruyor. Asıl olay o arada oluyor :DApplication kernel e geçmeden önce  symfony/http-foundation  paketinden bahsedersek. Request-Response objeleri burada host ediliyor.  Request  class ını incelerseniz. Yaptığı işlem gelen request i normalize etmek. Misal  $_GET[&#39;behram&#39;]  yerine  $request-&gt;query-&gt;get(&#39;behram&#39;)  şeklinde kullanabiliyorsunuz. Response class ‘ı da aynı mantıkta incelenebilir. Paketi aynı zamanda spagetti kod bir projeniz dahi olsa kullanabilirsiniz.\nDönüştürülme işini Http Kernel handle ediyor. Yaptığı işlem request i alıp sırasıyla event dispatch etmek ve client için Response hazırlamak. Öncelikle  buradan  projeyi boot ediyor yani kernelimizde enable edilen tüm bundles ın boot metodunu çalıştırmak oluyor. Sonrasında  buradan  kernel.controller  event ini dispatch ediyor. Hemen devreye routing imiz giriyor ve request e bakıyor istek yapılan url ile ilgili bir routing configuration var mı? Bulabilirse hemen alakalı action ı controller a set ediyor. Eğer ki isterseniz bu event i listen edip routing i override da edebilirsiniz. Bunu yapabilmek büyük projelerde binlerce line yazmaktan kurtarıyor çoğu zaman. Eğer ki exception varsa direk exception event i dispatch ediliyor.\nEvent Dispatch olayı biraz geniş bir konu kısaca bahsetmiş oldum. Bir ara onun için de post ayarlayacağım. Request -&gt; Response olayında dönüşüm tamamen Event Dispatch ile sağlanıyor. Bu olay bize her aşamada istediğimiz gibi müdahale edebilmemizi sağlıyor. 3. party bir bundle dahi olsa her aşamada müdahalede bulunabiliyorsunuz.\nOJS  gibi modüler yapıdaki büyük projelerde hayat kurtarıyor. Misal basit bir event listener ile request i dinleyip url farketmeksizin eğer ki japonyadan bir client gelirse jp domainine redirect yapabilirsiniz rahatlıkla. Veya doctrine ile bir obje güncellendiği zaman git bu objeyi slave elasticsearch index inde güncelle diyebilirsiniz. Yapabilecekleriniz çılgınlığınızla alakalı biraz ;)\nSürç-i lisan ettiysek affola,Mutlu günler :)\nAlakalı Linkler;\n\nhttp://symfony.com/doc/current/introduction/http_fundamentals.html\nhttp://symfony.com/doc/current/event_dispatcher.html\n\n","dateCreated":"2017-02-08T04:40:12+01:00","dateModified":"2019-04-04T06:48:56+02:00","datePublished":"2017-02-08T04:40:12+01:00","description":"","headline":"Symfony Request-Response Yapısı","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://behram.org/2017/02/08/symfony-request-response-yapisi/"},"publisher":{"@type":"Organization","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif","logo":{"@type":"ImageObject","url":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"}},"url":"https://behram.org/2017/02/08/symfony-request-response-yapisi/"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"},"articleBody":"Symfony ‘de bundles, modules, compenents, configurations vs. duyunca çok karışık framework havası var ancak işin aslı Symfony Framework sadece Request objesini alıp Response objesine dönüştürmesi. Symfony nin ana mantığının anlaşılması için Request/Response yapısı anlaşılması zorunlu sayılabilir.\nDönüştürme olayı  buradaki  iki satırdan anlaşılabilir. Gelen Request params ile bir Request objesi oluşturuluyor. Sonrasında application kernel request i handle ettikten sonra bir Response objesi return ediyor ve client a response gönderiliyor. Bu şekilde tek cümlede anlatınca application kernel in yaptığı basit bir olay gibi duruyor. Asıl olay o arada oluyor :DApplication kernel e geçmeden önce  symfony/http-foundation  paketinden bahsedersek. Request-Response objeleri burada host ediliyor.  Request  class ını incelerseniz. Yaptığı işlem gelen request i normalize etmek. Misal  $_GET[&#39;behram&#39;]  yerine  $request-&gt;query-&gt;get(&#39;behram&#39;)  şeklinde kullanabiliyorsunuz. Response class ‘ı da aynı mantıkta incelenebilir. Paketi aynı zamanda spagetti kod bir projeniz dahi olsa kullanabilirsiniz.\nDönüştürülme işini Http Kernel handle ediyor. Yaptığı işlem request i alıp sırasıyla event dispatch etmek ve client için Response hazırlamak. Öncelikle  buradan  projeyi boot ediyor yani kernelimizde enable edilen tüm bundles ın boot metodunu çalıştırmak oluyor. Sonrasında  buradan  kernel.controller  event ini dispatch ediyor. Hemen devreye routing imiz giriyor ve request e bakıyor istek yapılan url ile ilgili bir routing configuration var mı? Bulabilirse hemen alakalı action ı controller a set ediyor. Eğer ki isterseniz bu event i listen edip routing i override da edebilirsiniz. Bunu yapabilmek büyük projelerde binlerce line yazmaktan kurtarıyor çoğu zaman. Eğer ki exception varsa direk exception event i dispatch ediliyor.\nEvent Dispatch olayı biraz geniş bir konu kısaca bahsetmiş oldum. Bir ara onun için de post ayarlayacağım. Request -&gt; Response olayında dönüşüm tamamen Event Dispatch ile sağlanıyor. Bu olay bize her aşamada istediğimiz gibi müdahale edebilmemizi sağlıyor. 3. party bir bundle dahi olsa her aşamada müdahalede bulunabiliyorsunuz.\nOJS  gibi modüler yapıdaki büyük projelerde hayat kurtarıyor. Misal basit bir event listener ile request i dinleyip url farketmeksizin eğer ki japonyadan bir client gelirse jp domainine redirect yapabilirsiniz rahatlıkla. Veya doctrine ile bir obje güncellendiği zaman git bu objeyi slave elasticsearch index inde güncelle diyebilirsiniz. Yapabilecekleriniz çılgınlığınızla alakalı biraz ;)\nSürç-i lisan ettiysek affola,Mutlu günler :)\nAlakalı Linkler;\n\nhttp://symfony.com/doc/current/introduction/http_fundamentals.html\nhttp://symfony.com/doc/current/event_dispatcher.html\n\n","dateCreated":"2017-02-08T04:40:12+01:00","dateModified":"2019-04-04T06:48:56+02:00","datePublished":"2017-02-08T04:40:12+01:00","description":"","headline":"Symfony Request-Response Yapısı","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://behram.dev/2017/02/08/symfony-request-response-yapisi/"},"publisher":{"@type":"Organization","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif","logo":{"@type":"ImageObject","url":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"}},"url":"https://behram.dev/2017/02/08/symfony-request-response-yapisi/"}</script>
     <meta name="description" content="Symfony ‘de bundles, modules, compenents, configurations vs. duyunca çok karışık framework havası var ancak işin aslı Symfony Framework sadece Request objesini alıp Response objesine dönüştürmesi. Sym">
 <meta name="keywords" content="Behram,ÇELEN">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Symfony Request-Response Yapısı">
-<meta property="og:url" content="https://behram.org/2017/02/08/symfony-request-response-yapisi/index.html">
+<meta property="og:url" content="https://behram.dev/2017/02/08/symfony-request-response-yapisi/index.html">
 <meta property="og:site_name" content="Behram ÇELEN">
 <meta property="og:description" content="Symfony ‘de bundles, modules, compenents, configurations vs. duyunca çok karışık framework havası var ancak işin aslı Symfony Framework sadece Request objesini alıp Response objesine dönüştürmesi. Sym">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://symfony.com/doc/current/_images/xkcd-full.png">
-<meta property="og:updated_time" content="2019-04-04T04:48:56.020Z">
+<meta property="og:updated_time" content="2019-04-04T04:48:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Symfony Request-Response Yapısı">
 <meta name="twitter:description" content="Symfony ‘de bundles, modules, compenents, configurations vs. duyunca çok karışık framework havası var ancak işin aslı Symfony Framework sadece Request objesini alıp Response objesine dönüştürmesi. Sym">
@@ -328,7 +328,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/symfony-ile-gelismis-api-mimarisi/" data-tooltip="Symfony ile Gelişmiş API Mimarisi" aria-label="NEXT: Symfony ile Gelişmiş API Mimarisi">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/php-ve-elasticsearch-ile-gelismis-arama-mimarisi/" data-tooltip="PHP ile Gelişmiş Arama Mimarisi" aria-label="NEXT: PHP ile Gelişmiş Arama Mimarisi">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -346,7 +346,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2017/02/08/symfony-request-response-yapisi/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2017/02/08/symfony-request-response-yapisi/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -354,7 +354,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2017/02/08/symfony-request-response-yapisi/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2017/02/08/symfony-request-response-yapisi/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -362,7 +362,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.org/2017/02/08/symfony-request-response-yapisi/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.dev/2017/02/08/symfony-request-response-yapisi/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -402,7 +402,7 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2019 Behram ÇELEN. All Rights Reserved.
+        Copyrights &copy; 2021 Behram ÇELEN. All Rights Reserved.
     </span>
 </footer>
 
@@ -423,7 +423,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/symfony-ile-gelismis-api-mimarisi/" data-tooltip="Symfony ile Gelişmiş API Mimarisi" aria-label="NEXT: Symfony ile Gelişmiş API Mimarisi">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/php-ve-elasticsearch-ile-gelismis-arama-mimarisi/" data-tooltip="PHP ile Gelişmiş Arama Mimarisi" aria-label="NEXT: PHP ile Gelişmiş Arama Mimarisi">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -441,7 +441,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2017/02/08/symfony-request-response-yapisi/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2017/02/08/symfony-request-response-yapisi/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -449,7 +449,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2017/02/08/symfony-request-response-yapisi/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2017/02/08/symfony-request-response-yapisi/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -457,7 +457,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.org/2017/02/08/symfony-request-response-yapisi/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.dev/2017/02/08/symfony-request-response-yapisi/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -491,7 +491,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2017/02/08/symfony-request-response-yapisi/">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2017/02/08/symfony-request-response-yapisi/">
                         <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
                     </a>
                 </li>
@@ -499,7 +499,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2017/02/08/symfony-request-response-yapisi/">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2017/02/08/symfony-request-response-yapisi/">
                         <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
                     </a>
                 </li>
@@ -507,7 +507,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://behram.org/2017/02/08/symfony-request-response-yapisi/">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://behram.dev/2017/02/08/symfony-request-response-yapisi/">
                         <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
                     </a>
                 </li>
@@ -566,7 +566,7 @@
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'https://behram.org/2017/02/08/symfony-request-response-yapisi/';
+                 this.page.url = 'https://behram.dev/2017/02/08/symfony-request-response-yapisi/';
                  
                     this.page.identifier = '2017/02/08/symfony-request-response-yapisi/';
                  

@@ -15,16 +15,16 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"},"articleBody":"Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir kitle. Bunu sağlayan büyük oranda profesyonel bir şirket olan  SensioLabsın projenin takibini yürütmesi, özellikle  Fabien Potencier  gibi bir core developer ının olması. Fabien Potencier ı araştıranlar anlayacaktır neden bu kadar övdüğümü şuan PHP üzerine yapılan bir çok projenin, framework ün kullandığı compenent ler teknolojiler @fabpot un elinden çıkmadır. Aynı zamanda proje yönetimi konusundada oldukça efsanedir. Örnek projeleri;\n\nSymfony Compenents\nTwig Templating\nSilex\nSwift Mailer\nPimple\nDoctrine\nBlackfile\n.. ve daha neler neler\n\nAmaçSensioLabs ‘ın genel düşüncesi reusable components yazmaktır , ki bir component farklı projelerde rahatlıkla kullanılabilsin. Misal şuan Drupal, phpBB, Joomla! ve en çok Symfony alternatif olarak gösterilen Laravel birçok Symfony Components i kullanmaktadır, alakalı  link -&gt;. Yani şuana kadar aslında Symfony Components kullanmış olmanız muhtemel.\nCore Developer TeamEkibin büyük kısmı web development konusunda fazlaca tecrübeli ve birçoğu PHP nin önde gelen isimlerinden. Misal kesinlikle lame coders değiller, proje yönetimi nasıl olmalı, problem çözümü nasıl olmalı semver nasıl kullanılmalı vs. birçok konuda bilgi sahibiler. Birde Symfony Core Developer olmak gerçekten çok zor, alakalı  link  .Sırf bu sayfadaki rollerin, kimin ne yapabileceğinin düzenliliğinden dahi mükemmelliyetçiliği anlamak mümkün.\nContributingSymfony ye contribute etmek çetrefilli bir iş gerçekten. Herşeyin bir standardı bir prosodürü var neredeyse.  Buradan  anlaşılacağı üzere development da katı kurallara sahiptir. Yani az biraz coding bilen kişi pr göndereyim benim de katkım olsun diyebileceği bir proje değil kesinlikle. Ben projenin kalitesini bu katı kurallarına bağlayanlarındanım. Fakat yanlış anlaşılmasın symfony nin  ~1400  contributer ı var yani aslında biz developer ların elinden çıkma Open Source bir proje.\nRoadmap (link)Semver  denince benim aklıma direk Symfony projesi gelir. Sebebi ise mükemmel bir release roadmap i olması. Düşün ki şimdiden 2024 e kadar ki çıkacak releases  planı  hazır. Bu düzenlilik ne sağlıyor derseniz, birgün sabah kalktığınızda Symfony cahili olarak uyanmıyorsunuz. Misal Symfony3 release de silinecek code uses varsa bunu 2.7 gibi @deprecated işaretlemesini yaparlar ki sen yavaştan code revise ını yap Symfony3 e rahatlıkla geçebilesin. Özellikle büyük projeler için kararlı ve doğru semver kullanımı hayati öneme sahip. Symfony ile birgün  composer update  yaptığınızda patlama ihtimaliniz çok düşük. Aynı konunun  Pythonve  Angular.jsörneklerini araştırabilirsiniz.\nDocumantationO kadar çok dilin framework ün doc. unu okumuşumdur kesinlikle Symfony bu konuda bir dünya markası. Eğer ki bir contributing yapılıyorsa kesinlikle onun doc. uda ekleniyor.  Buradan  browse edileceği üzere gayet anlaşılır şekilde rich content ile anlatımlı documentation bulunabilir. Ayrıca örnek kodlar, coding standards ve blog yazıları gibi bir çok içerik mevcut. Özellikle  Best Practices  adlı bir bölümü tadından yenmez :) Pdf leri indirerek yolda vs. okuyabilirsiniz. Bana bunlar yetmedi daha görsel birşeyler arıyorum dersen de  KnpUniversity  var. Birde verdiğim linklerdeki tüm content İngilizce, “Ama benim ingilizcem yok” a cevabım net “derhal terket burayı, ingilizce öğrenene kadarda gelme” :) şaka bir yana ama gerçekten ingilizce olmadan Symfony öğrenmek biryana kaliteli bir  developer  olmanız imkansız.\nCommunitySymfony community si fazlasıyla etkin, sorunlarınıza irc kanalından, mail gruplarına, slack grubundan, stackoverflow dan veya direk Github project issues kısmından bildirebilirsiniz, ama öncelikle bir google araması yapmayı unutmayın :). Çok zorda kalırsan da  banagönderebilirsin (ama böyle çok aradın bulamadın :)Alakalı Linkler;\n\nhttps://symfony.com/support\nhttp://stackoverflow.com/questions/tagged/symfony2\nhttps://symfony.com/irc\nhttps://symfony2slack.herokuapp.com/\nhttp://symfony.com/mailing-listsMuhtemelen ilk google aramanda bulursun çözümünü. Senden önce birisi kesinlikle karşılaşmış oluyor zaten.\n\nMimari BakışSymfony Framework aslında sadece Symfony Components i birleştiren bir glue den ibarettir (bkn: SymfonyFrameworkBundle). Directory yapısına bakarsanız zaten vendor u çıkardıktan sonra geriye sadece app ın ve web in altında birkaç dosyadan ibaret olduğunu göreceksiniz. Benim gözümde Symfony ‘yi mükemmel kılanda bu modüler bakış açısı. Bu neyi sağlıyor, misal developer arkadaşım ben reusable XBundle yazacağım dediğin zaman bunu fazlasıyla destekliyor. Bu mantıkla Symfony için yapılmış binlerce 3. party bundle mevcut. Misal  FosUserBundle,  AsseticBundle  vs. vs.Modüler yapı ile neredeyse her noktada process e müdahil olabiliyorsun. Bunu nasıl yapıyor derseniz Event Dispatch mantığı (Farklı bir yazı ile bu konuyu da anlatmaya çalışacağım). Gerek naming gerek directory mapping açısından da kaliteli bir iş.\nŞimdilik bu kadar fırsat buldukça bu yazının devamını getirmeye çalışacağım.\n\n“ Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and a Community — all working together in harmony.”\nMutlu Günler :)\n","dateCreated":"2016-11-14T04:40:12+01:00","dateModified":"2019-04-04T06:48:03+02:00","datePublished":"2016-11-14T04:40:12+01:00","description":"","headline":"Neden Symfony?","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://behram.org/2016/11/14/symfony-yi-anlamak/"},"publisher":{"@type":"Organization","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif","logo":{"@type":"ImageObject","url":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"}},"url":"https://behram.org/2016/11/14/symfony-yi-anlamak/"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"},"articleBody":"Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir kitle. Bunu sağlayan büyük oranda profesyonel bir şirket olan  SensioLabsın projenin takibini yürütmesi, özellikle  Fabien Potencier  gibi bir core developer ının olması. Fabien Potencier ı araştıranlar anlayacaktır neden bu kadar övdüğümü şuan PHP üzerine yapılan bir çok projenin, framework ün kullandığı compenent ler teknolojiler @fabpot un elinden çıkmadır. Aynı zamanda proje yönetimi konusundada oldukça efsanedir. Örnek projeleri;\n\nSymfony Compenents\nTwig Templating\nSilex\nSwift Mailer\nPimple\nDoctrine\nBlackfile\n.. ve daha neler neler\n\nAmaçSensioLabs ‘ın genel düşüncesi reusable components yazmaktır , ki bir component farklı projelerde rahatlıkla kullanılabilsin. Misal şuan Drupal, phpBB, Joomla! ve en çok Symfony alternatif olarak gösterilen Laravel birçok Symfony Components i kullanmaktadır, alakalı  link -&gt;. Yani şuana kadar aslında Symfony Components kullanmış olmanız muhtemel.\nCore Developer TeamEkibin büyük kısmı web development konusunda fazlaca tecrübeli ve birçoğu PHP nin önde gelen isimlerinden. Misal kesinlikle lame coders değiller, proje yönetimi nasıl olmalı, problem çözümü nasıl olmalı semver nasıl kullanılmalı vs. birçok konuda bilgi sahibiler. Birde Symfony Core Developer olmak gerçekten çok zor, alakalı  link  .Sırf bu sayfadaki rollerin, kimin ne yapabileceğinin düzenliliğinden dahi mükemmelliyetçiliği anlamak mümkün.\nContributingSymfony ye contribute etmek çetrefilli bir iş gerçekten. Herşeyin bir standardı bir prosodürü var neredeyse.  Buradan  anlaşılacağı üzere development da katı kurallara sahiptir. Yani az biraz coding bilen kişi pr göndereyim benim de katkım olsun diyebileceği bir proje değil kesinlikle. Ben projenin kalitesini bu katı kurallarına bağlayanlarındanım. Fakat yanlış anlaşılmasın symfony nin  ~1400  contributer ı var yani aslında biz developer ların elinden çıkma Open Source bir proje.\nRoadmap (link)Semver  denince benim aklıma direk Symfony projesi gelir. Sebebi ise mükemmel bir release roadmap i olması. Düşün ki şimdiden 2024 e kadar ki çıkacak releases  planı  hazır. Bu düzenlilik ne sağlıyor derseniz, birgün sabah kalktığınızda Symfony cahili olarak uyanmıyorsunuz. Misal Symfony3 release de silinecek code uses varsa bunu 2.7 gibi @deprecated işaretlemesini yaparlar ki sen yavaştan code revise ını yap Symfony3 e rahatlıkla geçebilesin. Özellikle büyük projeler için kararlı ve doğru semver kullanımı hayati öneme sahip. Symfony ile birgün  composer update  yaptığınızda patlama ihtimaliniz çok düşük. Aynı konunun  Pythonve  Angular.jsörneklerini araştırabilirsiniz.\nDocumantationO kadar çok dilin framework ün doc. unu okumuşumdur kesinlikle Symfony bu konuda bir dünya markası. Eğer ki bir contributing yapılıyorsa kesinlikle onun doc. uda ekleniyor.  Buradan  browse edileceği üzere gayet anlaşılır şekilde rich content ile anlatımlı documentation bulunabilir. Ayrıca örnek kodlar, coding standards ve blog yazıları gibi bir çok içerik mevcut. Özellikle  Best Practices  adlı bir bölümü tadından yenmez :) Pdf leri indirerek yolda vs. okuyabilirsiniz. Bana bunlar yetmedi daha görsel birşeyler arıyorum dersen de  KnpUniversity  var. Birde verdiğim linklerdeki tüm content İngilizce, “Ama benim ingilizcem yok” a cevabım net “derhal terket burayı, ingilizce öğrenene kadarda gelme” :) şaka bir yana ama gerçekten ingilizce olmadan Symfony öğrenmek biryana kaliteli bir  developer  olmanız imkansız.\nCommunitySymfony community si fazlasıyla etkin, sorunlarınıza irc kanalından, mail gruplarına, slack grubundan, stackoverflow dan veya direk Github project issues kısmından bildirebilirsiniz, ama öncelikle bir google araması yapmayı unutmayın :). Çok zorda kalırsan da  banagönderebilirsin (ama böyle çok aradın bulamadın :)Alakalı Linkler;\n\nhttps://symfony.com/support\nhttp://stackoverflow.com/questions/tagged/symfony2\nhttps://symfony.com/irc\nhttps://symfony2slack.herokuapp.com/\nhttp://symfony.com/mailing-listsMuhtemelen ilk google aramanda bulursun çözümünü. Senden önce birisi kesinlikle karşılaşmış oluyor zaten.\n\nMimari BakışSymfony Framework aslında sadece Symfony Components i birleştiren bir glue den ibarettir (bkn: SymfonyFrameworkBundle). Directory yapısına bakarsanız zaten vendor u çıkardıktan sonra geriye sadece app ın ve web in altında birkaç dosyadan ibaret olduğunu göreceksiniz. Benim gözümde Symfony ‘yi mükemmel kılanda bu modüler bakış açısı. Bu neyi sağlıyor, misal developer arkadaşım ben reusable XBundle yazacağım dediğin zaman bunu fazlasıyla destekliyor. Bu mantıkla Symfony için yapılmış binlerce 3. party bundle mevcut. Misal  FosUserBundle,  AsseticBundle  vs. vs.Modüler yapı ile neredeyse her noktada process e müdahil olabiliyorsun. Bunu nasıl yapıyor derseniz Event Dispatch mantığı (Farklı bir yazı ile bu konuyu da anlatmaya çalışacağım). Gerek naming gerek directory mapping açısından da kaliteli bir iş.\nŞimdilik bu kadar fırsat buldukça bu yazının devamını getirmeye çalışacağım.\n\n“ Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and a Community — all working together in harmony.”\nMutlu Günler :)\n","dateCreated":"2016-11-14T04:40:12+01:00","dateModified":"2019-04-04T06:48:03+02:00","datePublished":"2016-11-14T04:40:12+01:00","description":"","headline":"Neden Symfony?","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://behram.dev/2016/11/14/symfony-yi-anlamak/"},"publisher":{"@type":"Organization","name":"Behram ÇELEN","sameAs":["https://github.com/behram","https://www.udemy.com/user/behramcelen/","https://twitter.com/behramcelen","https://medium.com/@behram","http://stackoverflow.com/users/2438520/behramcelen","https://www.youtube.com/user/behramcelen","mailto:behramcelen@gmail.com","https://www.slideshare.net/behramcelen"],"image":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif","logo":{"@type":"ImageObject","url":"https://media.giphy.com/media/3o7TKQbOUyMGGUZ28M/giphy.gif"}},"url":"https://behram.dev/2016/11/14/symfony-yi-anlamak/"}</script>
     <meta name="description" content="Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir">
 <meta name="keywords" content="Behram,ÇELEN">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Neden Symfony?">
-<meta property="og:url" content="https://behram.org/2016/11/14/symfony-yi-anlamak/index.html">
+<meta property="og:url" content="https://behram.dev/2016/11/14/symfony-yi-anlamak/index.html">
 <meta property="og:site_name" content="Behram ÇELEN">
 <meta property="og:description" content="Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-04T04:48:03.492Z">
+<meta property="og:updated_time" content="2019-04-04T04:48:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Neden Symfony?">
 <meta name="twitter:description" content="Öncelikle Symfony bir PHP framework ünden öte bir felsefedir. Gözümde Symfony PHP camiasının rock starıdır. Community si olsun Contributers ekibi olsun yönetici ekibi olsun kaliteli ve profesyonel bir">
@@ -304,7 +304,7 @@
 <li><a href="https://blackfire.io/" target="_blank" rel="noopener">Blackfile</a></li>
 <li>.. ve daha neler neler</li>
 </ul>
-<h3 id="Amac"><a href="#Amac" class="headerlink" title="Amaç"></a><a href="http://behram.org/2016/11/14/symfony-yi-anlamak/#Amac" title="Amaç"></a>Amaç</h3><p>SensioLabs ‘ın genel düşüncesi reusable components yazmaktır , ki bir component farklı projelerde rahatlıkla kullanılabilsin. Misal şuan Drupal, phpBB, Joomla! ve en çok Symfony alternatif olarak gösterilen Laravel birçok Symfony Components i kullanmaktadır, alakalı  <a href="http://symfony.com/projects" target="_blank" rel="noopener">link -&gt;</a>. Yani şuana kadar aslında Symfony Components kullanmış olmanız muhtemel.</p>
+<h3 id="Amac"><a href="#Amac" class="headerlink" title="Amaç"></a><a href="http://behram.org/2016/11/14/symfony-yi-anlamak/#Amac" title="Amaç" target="_blank" rel="noopener"></a>Amaç</h3><p>SensioLabs ‘ın genel düşüncesi reusable components yazmaktır , ki bir component farklı projelerde rahatlıkla kullanılabilsin. Misal şuan Drupal, phpBB, Joomla! ve en çok Symfony alternatif olarak gösterilen Laravel birçok Symfony Components i kullanmaktadır, alakalı  <a href="http://symfony.com/projects" target="_blank" rel="noopener">link -&gt;</a>. Yani şuana kadar aslında Symfony Components kullanmış olmanız muhtemel.</p>
 <h2 id="Core-Developer-Team"><a href="#Core-Developer-Team" class="headerlink" title="Core Developer Team"></a>Core Developer Team</h2><p>Ekibin büyük kısmı web development konusunda fazlaca tecrübeli ve birçoğu PHP nin önde gelen isimlerinden. Misal kesinlikle lame coders değiller, proje yönetimi nasıl olmalı, problem çözümü nasıl olmalı semver nasıl kullanılmalı vs. birçok konuda bilgi sahibiler. Birde Symfony Core Developer olmak gerçekten çok zor, alakalı  <a href="http://symfony.com/doc/current/contributing/code/core_team.html" target="_blank" rel="noopener">link</a>  .Sırf bu sayfadaki rollerin, kimin ne yapabileceğinin düzenliliğinden dahi mükemmelliyetçiliği anlamak mümkün.</p>
 <h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>Symfony ye contribute etmek çetrefilli bir iş gerçekten. Herşeyin bir standardı bir prosodürü var neredeyse.  <a href="http://symfony.com/doc/current/contributing/code/index.html" target="_blank" rel="noopener">Buradan</a>  anlaşılacağı üzere development da katı kurallara sahiptir. Yani az biraz coding bilen kişi pr göndereyim benim de katkım olsun diyebileceği bir proje değil kesinlikle. Ben projenin kalitesini bu katı kurallarına bağlayanlarındanım. Fakat yanlış anlaşılmasın symfony nin  <a href="https://github.com/symfony/symfony/graphs/contributors" target="_blank" rel="noopener">~1400</a>  contributer ı var yani aslında biz developer ların elinden çıkma Open Source bir proje.</p>
 <h2 id="Roadmap-link"><a href="#Roadmap-link" class="headerlink" title="Roadmap (link)"></a>Roadmap (<a href="https://symfony.com/doc/current/contributing/community/releases.html" target="_blank" rel="noopener">link</a>)</h2><p><a href="http://semver.org/" target="_blank" rel="noopener">Semver</a>  denince benim aklıma direk Symfony projesi gelir. Sebebi ise mükemmel bir release roadmap i olması. Düşün ki şimdiden 2024 e kadar ki çıkacak releases  <a href="https://symfony.com/doc/current/contributing/community/releases.html" target="_blank" rel="noopener">planı</a>  hazır. Bu düzenlilik ne sağlıyor derseniz, birgün sabah kalktığınızda Symfony cahili olarak uyanmıyorsunuz. Misal Symfony3 release de silinecek code uses varsa bunu 2.7 gibi @deprecated işaretlemesini yaparlar ki sen yavaştan code revise ını yap Symfony3 e rahatlıkla geçebilesin. Özellikle büyük projeler için kararlı ve doğru semver kullanımı hayati öneme sahip. Symfony ile birgün  <code>composer update</code>  yaptığınızda patlama ihtimaliniz çok düşük. Aynı konunun  <code>Python</code>ve  <code>Angular.js</code>örneklerini araştırabilirsiniz.</p>
@@ -336,7 +336,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/php-ve-elasticsearch-ile-gelismis-arama-mimarisi/" data-tooltip="PHP ile Gelişmiş Arama Mimarisi" aria-label="PREVIOUS: PHP ile Gelişmiş Arama Mimarisi">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/symfony-ile-gelismis-api-mimarisi/" data-tooltip="Symfony ile Gelişmiş API Mimarisi" aria-label="PREVIOUS: Symfony ile Gelişmiş API Mimarisi">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -363,7 +363,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2016/11/14/symfony-yi-anlamak/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -371,7 +371,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2016/11/14/symfony-yi-anlamak/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -379,7 +379,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.dev/2016/11/14/symfony-yi-anlamak/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -419,7 +419,7 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2019 Behram ÇELEN. All Rights Reserved.
+        Copyrights &copy; 2021 Behram ÇELEN. All Rights Reserved.
     </span>
 </footer>
 
@@ -432,7 +432,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/php-ve-elasticsearch-ile-gelismis-arama-mimarisi/" data-tooltip="PHP ile Gelişmiş Arama Mimarisi" aria-label="PREVIOUS: PHP ile Gelişmiş Arama Mimarisi">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/06/symfony-ile-gelismis-api-mimarisi/" data-tooltip="Symfony ile Gelişmiş API Mimarisi" aria-label="PREVIOUS: Symfony ile Gelişmiş API Mimarisi">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -459,7 +459,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2016/11/14/symfony-yi-anlamak/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -467,7 +467,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2016/11/14/symfony-yi-anlamak/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -475,7 +475,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/14/symfony-yi-anlamak/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://behram.dev/2016/11/14/symfony-yi-anlamak/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -509,7 +509,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.org/2016/11/14/symfony-yi-anlamak/">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://behram.dev/2016/11/14/symfony-yi-anlamak/">
                         <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
                     </a>
                 </li>
@@ -517,7 +517,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://behram.org/2016/11/14/symfony-yi-anlamak/">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://behram.dev/2016/11/14/symfony-yi-anlamak/">
                         <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
                     </a>
                 </li>
@@ -525,7 +525,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://behram.org/2016/11/14/symfony-yi-anlamak/">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://behram.dev/2016/11/14/symfony-yi-anlamak/">
                         <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
                     </a>
                 </li>
@@ -584,7 +584,7 @@
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'https://behram.org/2016/11/14/symfony-yi-anlamak/';
+                 this.page.url = 'https://behram.dev/2016/11/14/symfony-yi-anlamak/';
                  
                     this.page.identifier = '2016/11/14/symfony-yi-anlamak/';
                  
